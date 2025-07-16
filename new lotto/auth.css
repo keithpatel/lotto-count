@@ -1,0 +1,252 @@
+/* Auth Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Attractive gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Removed overflow: hidden; to allow scrolling */
+}
+
+.auth-container {
+    background-color: #ffffff; /* White background for the form card */
+    padding: 40px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger, more attractive shadow */
+    text-align: center;
+    max-width: 450px; /* Slightly wider for better balance */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; /* Ensure it's above any background elements */
+    transition: transform 0.3s ease-in-out; /* Subtle hover effect */
+}
+
+.auth-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.auth-header h2 {
+    font-size: 2.5em; /* Larger title */
+    font-weight: 700;
+    color: #333; /* Darker text for contrast */
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    font-size: 1.1em;
+    color: #666; /* Slightly softer text */
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 18px; /* More padding for a larger touch area */
+    border: 1px solid #e0e0e0; /* Lighter border */
+    border-radius: 10px; /* More rounded input fields */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for inputs */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.form-group input:focus {
+    border-color: #2193b0; /* Highlight color on focus */
+    box-shadow: 0 0 0 3px rgba(33, 147, 176, 0.2); /* Subtle glow on focus */
+    background-color: #fff;
+    outline: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: flex-end; /* Align forgot password to the right */
+    margin-bottom: 25px;
+}
+
+.form-options a {
+    color: #2193b0; /* Match accent color */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.form-options a:hover {
+    color: #146a80; /* Darker on hover */
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px; /* Larger button */
+    background: linear-gradient(45deg, #2193b0, #6dd5ed); /* Gradient button */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #146a80, #4db8d4); /* Darker gradient on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Lift effect on hover */
+}
+
+.divider {
+    margin: 30px 0;
+    font-size: 0.9em;
+    color: #aaa;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #eee;
+    z-index: 0;
+}
+
+.divider span {
+    background-color: #fff;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px; /* Consistent padding */
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.btn-google:hover {
+    border-color: #2193b0; /* Accent color on hover */
+    color: #2193b0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* More prominent shadow on hover */
+}
+
+.btn-google img {
+    width: 22px; /* Slightly larger icon */
+    height: 22px;
+    margin-right: 12px; /* More space */
+}
+
+.auth-footer {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #777;
+}
+
+.auth-footer a {
+    color: #2193b0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: #146a80;
+}
+
+/* Responsive adjustments for auth.css */
+@media (max-width: 600px) {
+    .auth-container {
+        padding: 25px;
+        margin: 20px; /* Add some margin on smaller screens */
+    }
+
+    .auth-header h2 {
+        font-size: 2em;
+    }
+
+    .auth-header p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .form-group input {
+        padding: 12px 15px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .btn-google {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .btn-google img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .auth-wrapper {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .auth-branding {
+        width: 100%;
+        padding: 30px 20px;
+        min-height: unset; /* Remove min-height for stacking */
+    }
+
+    .auth-form-section {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .auth-container {
+        padding: 20px;
+    }
+
+    .auth-header h2 {
+        font-size: 1.8em;
+    }
+
+    .auth-header p {
+        font-size: 0.9em;
+    }
+
+    .btn-submit {
+        font-size: 1em;
+    }
+}
